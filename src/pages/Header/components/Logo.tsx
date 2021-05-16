@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import styled from "styled-components";
-import WeerkDay from "../../assets/images/weerkday.png";
+import WeerkDay from "../../../assets/images/weerkday.png";
 
 const LogoContainer = styled(Grid)`
     position: relative;
@@ -11,9 +11,9 @@ const LogoContainer = styled(Grid)`
 
 const Logo = () => {
     return (
-        <LogoContainer item xs={3}>
+        <LogoContainer item xs={2}>
             <img
-                style={{ height: "100%", objectFit: "contain" }}
+                style={{ height: "80%", objectFit: "contain" }}
                 src={WeerkDay}
                 alt="Weerk Day"
             ></img>

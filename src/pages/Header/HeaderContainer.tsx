@@ -1,8 +1,8 @@
 import { AppBar, Grid } from "@material-ui/core";
 import styled from "styled-components/macro";
-import Employee from "./Employee";
-import Logo from "./Logo";
-import Search from "./Search";
+import Employee from "./components/Employee";
+import Logo from "./components/Logo";
+import Search from "./components/Search";
 
 const HeaderBar = styled(AppBar)`
     position: static;
@@ -22,8 +22,8 @@ const Header = () => {
     return (
         <HeaderBar>
             <HeaderWrapper container>
-                <Search />
                 <Logo />
+                <Search />
                 <Employee />
             </HeaderWrapper>
         </HeaderBar>

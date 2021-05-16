@@ -6,7 +6,7 @@ const Wrapper = styled(Grid)`
     position: relative;
     display: flex;
     height: 100%;
-    justify-content: center;
+    justify-content: flex-start;
 `;
 
 const SearchWrapper = styled.div`
@@ -16,21 +16,22 @@ const SearchWrapper = styled.div`
     &:hover {
         background-color: rgba(0, 0, 0, 0.25);
     }
-    margin: 5px;
+    margin: 8px;
 `;
 
 const SearchTextbox = styled.div`
-    padding: 2px;
+    padding-left: 2px;
+    padding-top: 7px;
     height: 100%;
     position: absolute;
     pointer-events: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 `;
 
 const SearchInput = styled(InputBase)`
-    padding: 10px 0px 0px 30px;
+    padding: 5px 0px 0px 30px;
     width: 100%;
 
     input {
@@ -40,7 +41,7 @@ const SearchInput = styled(InputBase)`
 
 const Search = () => {
     return (
-        <Wrapper item xs={3}>
+        <Wrapper item xs={7}>
             <SearchWrapper>
                 <SearchTextbox>
                     <SearchIcon />

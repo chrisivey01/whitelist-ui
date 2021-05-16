@@ -1,8 +1,8 @@
 import { List, ListItem, ListItemText } from "@material-ui/core";
+import { MouseEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import { FC, MouseEvent, useState } from "react";
-import { Panel } from "../models/Panel";
 import styled from "styled-components";
+import { Panel } from "../../models/Panel";
 
 const SideBarContainer = styled.div`
     background: #233044;
@@ -27,7 +27,7 @@ type Panels = {
     panels: Panel[];
 };
 
-const Drawer = ({ panels }: Panels) => {
+const Sidebar = ({ panels }: Panels) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const handleListItemClick = (
@@ -59,4 +59,4 @@ const Drawer = ({ panels }: Panels) => {
         </SideBarContainer>
     );
 };
-export default Drawer;
+export default Sidebar;

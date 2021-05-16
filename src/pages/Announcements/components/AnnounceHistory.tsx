@@ -11,11 +11,11 @@ import {
 } from "react";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { Announcement } from "../../models/Announcement";
+import { Announcement } from "../../../models/Announcement";
 import {
     cancelEditAnnouncement,
     updateAnnouncement,
-} from "../../redux/announcements/announcements.actions";
+} from "../../../redux/announcements/announcements.actions";
 import Menu from "./Menu";
 
 const AnnounceContainer = styled(Grid)`

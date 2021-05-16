@@ -1,6 +1,6 @@
 import { Avatar, Grid, Typography } from "@material-ui/core";
 import styled from "styled-components";
-import Profile from "../../assets/images/5259260.png";
+import Profile from "../../../assets/images/5259260.png";
 
 const EmployeeContainer = styled(Grid)`
     position: relative;
@@ -17,16 +17,10 @@ const EmployeeWrapper = styled(Grid)`
     justify-content: space-between;
 `;
 
-const EmployeeName = styled(Typography)`
-    margin: 0 5% 0 0 !important;
-    white-space: nowrap;
-`;
-
 const Employee = () => {
     return (
         <EmployeeContainer item xs={3}>
             <EmployeeWrapper>
-                <EmployeeName variant="caption">Eduardo Chupador</EmployeeName>
                 <Avatar src={Profile} />
             </EmployeeWrapper>
         </EmployeeContainer>

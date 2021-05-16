@@ -1,24 +1,25 @@
-import Absence from "../components/Absence";
-import Announcements from "../containers/Announcements";
-import Employees from "../components/Employees";
-import Eotw from "../components/Eotw";
-import WeeklyHours from "../components/WeeklyHours";
+import Absence from "../pages/Absence";
+import Announcements from "../pages/Announcements/AnnouncementsContainer";
+import Employees from "../pages/Employees";
+import Eotw from "../pages/Eotw";
+import WeeklyHours from "../pages/WeeklyHours";
+import WelcomeContainer from "../pages/Welcome/WelcomeContainer";
 
 export const panels = [
     {
-        label: "Announcements",
+        label: "Welcome",
         name: "/",
+        component: WelcomeContainer,
+    },
+    {
+        label: "Announcements",
+        name: "/announcements",
         component: Announcements,
     },
     {
         label: "Employees",
         name: "/employees",
         component: Employees,
-    },
-    {
-        label: "Weekly Hours",
-        name: "/weekly_hours",
-        component: WeeklyHours,
     },
     {
         label: "Employee of the Week",

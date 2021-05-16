@@ -1,16 +1,16 @@
 import { Divider, Grid } from "@material-ui/core";
 import { MouseEvent, useEffect, useRef, useState } from "react";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
-import announcementsJson from "../assets/json/announcements.json";
-import ChatHistory from "../components/Announcements/AnnounceHistory";
-import TextInput from "../components/Announcements/TextInput";
+import announcementsJson from "../../assets/json/announcements.json";
+import ChatHistory from "./components/AnnounceHistory";
+import TextInput from "./components/TextInput";
 import {
     deleteAnnouncement,
     editAnnouncement,
     loadAnnouncements,
     postAnnouncement,
     showHideButton,
-} from "../redux/announcements/announcements.actions";
+} from "../../redux/announcements/announcements.actions";
 
 const Announcements = () => {
     const dispatch = useDispatch();

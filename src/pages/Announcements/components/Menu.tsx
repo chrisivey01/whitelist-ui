@@ -8,7 +8,7 @@ import {
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Fragment, MouseEvent } from "react";
 import styled from "styled-components";
-import { Announcement } from "../../models/Announcement";
+import { Announcement } from "../../../models/Announcement";
 
 type MenuOptionsPropTypes = {
     anchorEl: any;
