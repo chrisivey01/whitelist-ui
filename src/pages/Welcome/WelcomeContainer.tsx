@@ -1,14 +1,16 @@
-import { Box, Card, CardHeader, Grid, Paper } from "@material-ui/core";
+import { Card, CardContent, CardHeader, Grid } from "@material-ui/core";
 import { useEffect } from "react";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { getUserInfo } from "../../redux/welcome/welcome.actions";
-import Message from "./components/Message";
 import boss from "../../assets/json/user-boss.json";
+import { getUserInfo } from "../../redux/welcome/welcome.actions";
+import IconListContainer from "../IconList/IconListContainer";
+import Message from "./components/Message";
 
 const Container = styled(Grid)`
     position: relative;
     justify-content: center;
+
 `;
 
 const Wrapper = styled(Grid)`
@@ -28,6 +30,8 @@ const ContentContainer = styled(Grid)`
 const Content = styled(Card)`
     width: 500px;
     height: 500px;
+    min-width: 500px;
+    min-height: 500px;
     padding: 30px;
     background-color: rgb(35, 48, 68) !important;
 `;
@@ -35,6 +39,8 @@ const Content = styled(Card)`
 const Header = styled(CardHeader)`
     color: #fff;
 `;
+
+const Body = styled(CardContent)``;
 
 const WelcomeContainer = () => {
     const dispatch = useDispatch();
@@ -52,9 +58,11 @@ const WelcomeContainer = () => {
             <ContentContainer>
                 <Content elevation={3}>
                     <Header title={"Announcements"} />
+                    {/* <Body>{}</Body> */}
                 </Content>
                 <Content elevation={3}>
                     <Header title={"Applications"} />
+                    <IconListContainer />
                 </Content>
             </ContentContainer>
         </Container>
