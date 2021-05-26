@@ -1,6 +1,6 @@
 import Absence from "../pages/Absence";
 import Announcements from "../pages/Announcements/AnnouncementsContainer";
-import Employees from "../pages/Employees";
+import EmployeesContainer from "../pages/Employees/EmployeesContainer";
 import Eotw from "../pages/Eotw";
 import WelcomeContainer from "../pages/Welcome/WelcomeContainer";
 
@@ -18,7 +18,7 @@ export const panels = [
     {
         label: "Employees",
         name: "/employees",
-        component: Employees,
+        component: EmployeesContainer,
     },
     {
         label: "Employee of the Week",

@@ -1,4 +1,4 @@
-import { Grid, TextField, Typography } from "@material-ui/core";
+import { Box, Grid, TextField, Typography } from "@material-ui/core";
 import moment from "moment";
 import {
     FocusEvent,
@@ -16,6 +16,7 @@ import {
     cancelEditAnnouncement,
     updateAnnouncement,
 } from "../../../redux/announcements/announcements.actions";
+import UpvoteDownvote from "../../LatestAnnouncement/components/UpvoteDownvote";
 import Menu from "./Menu";
 
 const AnnounceContainer = styled(Grid)`
@@ -57,7 +58,7 @@ const AnnouncementBubble = styled.div<{ edit: boolean }>`
     display: inline-block;
     background: rgba(255, 255, 255, 0.08);
     color: rgba(238, 238, 238, 0.9);
-    padding: 10px 10px 0px 10px;
+    padding: 15px;
     box-shadow: rgb(0 0 0 / 5%) 0px 1px 2px 0px;
     width: ${(props) => (props.edit ? width75 : widthAuto)};
     border-radius: 3px;
@@ -101,6 +102,11 @@ const AnnouncementText = styled(Typography)`
     font-size: 12px !important;
 `;
 
+const UpvoteDownvoteWrapper = styled(Box)`
+    position: absolute;
+    bottom: 20px;
+`;
+
 type AnnounceTextProps = {
     item: Announcement;
     i: number;
@@ -110,7 +116,7 @@ type AnnounceTextProps = {
 const AnnounceText = ({ item, i, textRef }: AnnounceTextProps) => {
     const dispatch = useDispatch();
     const announcements = useSelector(
-        (state: RootStateOrAny) => state.announcements.announcements
+        (state: RootStateOrAny) => state.announcements.announcementList
     );
 
     const handleChange = (
@@ -123,7 +129,7 @@ const AnnounceText = ({ item, i, textRef }: AnnounceTextProps) => {
         return (
             <AnnounceTextField
                 label="Announcement"
-                defaultValue={item.announce}
+                defaultValue={item.text}
                 margin="dense"
                 fullWidth={true}
                 onBlur={handleChange}
@@ -139,9 +145,7 @@ const AnnounceText = ({ item, i, textRef }: AnnounceTextProps) => {
             />
         );
     } else {
-        return (
-            <AnnouncementText ref={textRef}>{item.announce}</AnnouncementText>
-        );
+        return <AnnouncementText ref={textRef}>{item.text}</AnnouncementText>;
     }
 };
 
@@ -176,7 +180,7 @@ const AnnounceHistory = ({
     open,
 }: AnnounceHistoryPropsType) => {
     const chatRef: any = useRef();
-
+    const user = useSelector((state: RootStateOrAny) => state.user.employee);
     useEffect(() => {
         if (chatRef.current) {
             chatRef.current.scrollIntoView();
@@ -199,16 +203,20 @@ const AnnounceHistory = ({
                     >
                         <AnnouncementWrapper>
                             <AnnouncementBubble edit={item.edit}>
-                                <Menu
-                                    menuOpen={menuOpen}
-                                    i={i}
-                                    item={item}
-                                    anchorEl={anchorEl}
-                                    open={open}
-                                    menuClose={menuClose}
-                                    handleEdit={handleEdit}
-                                    handleDelete={handleDelete}
-                                />
+                                {user.rank === "boss" ? (
+                                    <Menu
+                                        menuOpen={menuOpen}
+                                        i={i}
+                                        item={item}
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        menuClose={menuClose}
+                                        handleEdit={handleEdit}
+                                        handleDelete={handleDelete}
+                                    />
+                                ) : (
+                                    <></>
+                                )}
 
                                 <AnnounceText
                                     item={item}
@@ -224,6 +232,14 @@ const AnnounceHistory = ({
                                 </TimeSaveContainer>
                             </AnnouncementBubble>
                         </AnnouncementWrapper>
+                        <UpvoteDownvoteWrapper>
+                            <UpvoteDownvote
+                                thumbsUp={item.thumbsUp.count}
+                                thumbsDown={item.thumbsDown.count}
+                                upvoteHandler={() => null}
+                                downvoteHandler={() => null}
+                            />
+                        </UpvoteDownvoteWrapper>
                         <TextTime>{moment().fromNow()}</TextTime>
                     </AnnouncementMessage>
                 );

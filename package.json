@@ -55,6 +55,7 @@
   "devDependencies": {
     "@types/redux-logger": "^3.0.8",
     "@types/styled-components": "^5.1.9",
+    "process": "^0.11.10",
     "sass": "^1.32.12"
   }
 }

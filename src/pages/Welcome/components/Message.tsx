@@ -1,4 +1,5 @@
-import { Card, Paper, Typography } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
+import SettingsIcon from "@material-ui/icons/Settings";
 import styled from "styled-components";
 
 const Wrapper = styled(Paper)`
@@ -9,6 +10,8 @@ const Wrapper = styled(Paper)`
         width: 75%;
         margin: 10px;
         height: 22px;
+        display: flex;
+        justify-content: space-between;
     }
 `;
 
@@ -20,6 +23,7 @@ const Message = ({ user }: MessagePropType) => {
     return (
         <Wrapper>
             <Typography>Welcome, {user.name}</Typography>
+            <SettingsIcon />
         </Wrapper>
     );
 };

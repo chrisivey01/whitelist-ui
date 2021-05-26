@@ -1,42 +1,106 @@
 [
     {
-        "announce": "asdasdasd",
+        "text": "asdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasd asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd asdasdasdasdasdasd",
+        "text": "asdasd asdasd asdasd asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd asdasdasdasdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
+        "text": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
+        "text": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
+        "text": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
+        "text": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
+        "text": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasdasdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     },
     {
-        "announce": "asdasd asdasd asdasdasdasd asdasdasdasd asdasd asdasdasdasd asdasd asdasdasdasd",
+        "text": "Every now and then you gotta suck a few bad dicks to get that one good one.",
         "show": false,
-        "edit": false
+        "edit": false,
+        "thumbsUp": {
+            "count": 0,
+            "people": []
+        },
+        "thumbsDown": {
+            "count": 0,
+            "people": []
+        }
     }
 ]

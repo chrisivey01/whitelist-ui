@@ -1,4 +1,4 @@
-import { Avatar, Grid, Typography } from "@material-ui/core";
+import { Avatar, Grid } from "@material-ui/core";
 import styled from "styled-components";
 import Profile from "../../../assets/images/5259260.png";
 

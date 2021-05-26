@@ -2,7 +2,7 @@ import { Divider, Grid } from "@material-ui/core";
 import { MouseEvent, useEffect, useRef, useState } from "react";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import announcementsJson from "../../assets/json/announcements.json";
-import ChatHistory from "./components/AnnounceHistory";
+import AnnounceHistory from "./components/AnnounceHistory";
 import TextInput from "./components/TextInput";
 import {
     deleteAnnouncement,
@@ -14,8 +14,10 @@ import {
 
 const Announcements = () => {
     const dispatch = useDispatch();
+    const user = useSelector((state: RootStateOrAny) => state.user.employee);
+
     const announcements = useSelector(
-        (state: RootStateOrAny) => state.announcements.announcements
+        (state: RootStateOrAny) => state.announcements.announcementList
     );
     const [text, setText] = useState("");
     const textRef: any = useRef(null);
@@ -32,9 +34,17 @@ const Announcements = () => {
 
     const textboxHandler = () => {
         const submittedData = {
-            announce: text,
+            text: text,
             show: false,
             edit: false,
+            thumbsUp: {
+                count: 0,
+                people: [],
+            },
+            thumbsDown: {
+                count: 0,
+                people: [],
+            },
         };
         dispatch(postAnnouncement(submittedData, announcements));
         setText("");
@@ -75,7 +85,7 @@ const Announcements = () => {
 
     return (
         <Grid>
-            <ChatHistory
+            <AnnounceHistory
                 data={announcements}
                 textRef={textRef}
                 anchorEl={anchorEl}
@@ -88,11 +98,15 @@ const Announcements = () => {
                 open={open}
             />
             <Divider />
-            <TextInput
-                text={text}
-                setText={setText}
-                clickHandler={textboxHandler}
-            />
+            {user.rank === "boss" ? (
+                <TextInput
+                    text={text}
+                    setText={setText}
+                    clickHandler={textboxHandler}
+                />
+            ) : (
+                <></>
+            )}
         </Grid>
     );
 };

@@ -1,22 +1,18 @@
-import { Box, CardContent, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import styled from "styled-components";
 import { applicationList } from "../../utils/applicationList";
 import Icon from "./components/Icon";
 
-const Container = styled(CardContent)`
-    display: flex;
-    flex-wrap: wrap;
+const Container = styled(Grid)`
     justify-content: space-between;
     color: #fff;
-    max-width: 500px;
 `;
-
 
 const IconListContainer = () => {
     return (
-        <Container>
-            {applicationList.map((image: any) => {
-                return <Icon image={image} />;
+        <Container wrap={"wrap"} container spacing={2}>
+            {applicationList.map((image: any, i:number) => {
+                return <Icon image={image} key={i}/>;
             })}
         </Container>
     );

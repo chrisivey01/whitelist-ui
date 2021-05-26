@@ -10,18 +10,17 @@ import { applyMiddleware, createStore } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 import combineReducers from "./redux/index";
-
+import GlobalStyle from "./utils/globalCss";
 const middle = [thunk, logger];
 const store = createStore(combineReducers, applyMiddleware(...middle)); // Defaults to weight 400.
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </Provider>
-    </React.StrictMode>,
+    <Provider store={store}>
+        <BrowserRouter>
+            {/* <GlobalStyle /> */}
+            <App />
+        </BrowserRouter>
+    </Provider>,
     document.getElementById("root")
 );
 

@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import { announcementReducer } from "./announcements/announcements.reducer";
-import { welcomeReducer } from "./welcome/welcome.reducers";
+import { userReducer } from "./user/user.reducers";
 
 export default combineReducers({
     announcements: announcementReducer,
-    welcome: welcomeReducer,
+    user: userReducer,
 });
